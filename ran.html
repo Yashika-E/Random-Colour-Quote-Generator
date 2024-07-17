@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Background Color and Quote</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="content" class="hidden">
+        <p id="quote"></p>
+        <button onclick="ranColorAndQuote()">Click me</button>
+    </div>
+
+    <script>
+        const quotes = [
+            "The greatest glory in living lies not in never falling, but in rising every time we fall. - Nelson Mandela",
+            "The way to get started is to quit talking and begin doing. - Walt Disney",
+            "Your time is limited, don't waste it living someone else's life. - Steve Jobs",
+            "If life were predictable it would cease to be life, and be without flavor. - Eleanor Roosevelt",
+            "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough. - Oprah Winfrey",
+            "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success. - James Cameron",
+            "Life is what happens when you're busy making other plans. - John Lennon"
+        ];
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        function ranColorAndQuote() {
+            // Change background color
+            const r = getRandomInt(256);
+            const g = getRandomInt(256);
+            const b = getRandomInt(256);
+            document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+            // Change quote
+            const randomIndex = getRandomInt(quotes.length);
+            document.getElementById('quote').innerText = quotes[randomIndex];
+        }
+
+        // Show content after a short delay
+        window.onload = function() {
+            setTimeout(() => {
+                document.getElementById('content').classList.remove('hidden');
+            }, 1000); // 1-second delay before showing the content
+        }
+    </script>
+</body>
+</html>

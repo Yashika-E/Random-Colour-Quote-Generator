@@ -1,0 +1,62 @@
+/* Basic reset for body and html */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Centering content and styling */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-color: #333; /* Default background color */
+    transition: background-color 0.5s ease; /* Smooth transition for background color change */
+}
+
+/* Hide the content by default */
+.hidden {
+    display: none;
+}
+
+/* Styling for the quote text */
+#quote {
+    font-size: 1.5em;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent background for readability */
+}
+
+/* Styling for the button */
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Button active effect */
+button:active {
+    background-color: #003d7a;
+}
+
+/* Ensure the button text remains readable */
+button:focus {
+    outline: none;
+}
